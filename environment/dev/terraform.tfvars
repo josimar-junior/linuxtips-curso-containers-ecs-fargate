@@ -1,4 +1,4 @@
-project_name = "linuxtips-ecs-cluster-fargate"
+project_name = "linuxtips-ecs-cluster"
 
 ### SSM VPC Parameters ###
 ssm_vpc_id           = "/linuxtips-vpc/vpc/vpc_id"
