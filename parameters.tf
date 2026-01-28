@@ -9,3 +9,21 @@ resource "aws_ssm_parameter" "listener_arn" {
   value = aws_lb_listener.main.arn
   type  = "String"
 }
+
+resource "aws_ssm_parameter" "lb_internal_arn" {
+  name  = "/linuxtips/ecs/lb/internal/arn"
+  value = aws_lb.internal.arn
+  type  = "String"
+}
+
+resource "aws_ssm_parameter" "listener_internal_arn" {
+  name  = "/linuxtips/ecs/lb/internal/listener"
+  value = aws_lb_listener.internal.arn
+  type  = "String"
+}
+
+resource "aws_ssm_parameter" "cloudmap" {
+  name  = "/linuxtips/ecs/cloudmap/namespace"
+  value = aws_service_discovery_private_dns_namespace.main.id
+  type  = "String"
+}
