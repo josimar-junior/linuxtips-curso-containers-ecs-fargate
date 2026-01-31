@@ -28,3 +28,8 @@ output "service_connect_dns_ssm" {
   value       = aws_ssm_parameter.service_connect_dns.id
   description = "The dns for the cluster`s service connect"
 }
+
+output "vpc_link" {
+  description = "VPC Link ID"
+  value       = aws_ssm_parameter.vpclink.id
+}
